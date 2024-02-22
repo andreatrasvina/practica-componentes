@@ -1,22 +1,44 @@
-import logo from './logo.svg';
+import React from 'react';
+import Logo from './components/Logo';
+import Title from './components/Title';
+import SearchBar from './components/SearchBar';
+import Recipe from './components/Recipe';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Logo />
+        <Title />
+        <SearchBar />
+        <div className="recipe-container">
+          <Recipe 
+            imageUrl="imagen.png" 
+            title="Título de la receta 1" 
+            description="Descripción más detallada de la receta 1."
+          />
+
+          <Recipe 
+            imageUrl="imagen.png" 
+            title="Título de la receta 2" 
+            description="Descripción más detallada de la receta 2."
+          />
+
+          <Recipe 
+            imageUrl="imagen.png" 
+            title="Título de la receta 3" 
+            description="Descripción más detallada de la receta 3."
+          />
+
+          <Recipe 
+            imageUrl="imagen.png" 
+            title="Título de la receta 4" 
+            description="Descripción más detallada de la receta 4."
+          />
+
+          
+        </div>
       </header>
     </div>
   );
